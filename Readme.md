@@ -1,3 +1,9 @@
+<!-- default file list -->
+*Files to look at*:
+
+* [Form1.cs](./CS/SelectQueryWindowsFormsApplication/Form1.cs) (VB: [Form1.vb](./VB/SelectQueryWindowsFormsApplication/Form1.vb))
+* [StDevOperator.cs](./CS/SelectQueryWindowsFormsApplication/StDevOperator.cs) (VB: [StDevOperator.vb](./VB/SelectQueryWindowsFormsApplication/StDevOperator.vb))
+<!-- default file list end -->
 # How to use a custom function in a query expression
 
 
