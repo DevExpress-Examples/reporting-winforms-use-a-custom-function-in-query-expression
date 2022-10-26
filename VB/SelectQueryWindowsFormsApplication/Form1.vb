@@ -42,19 +42,21 @@ Namespace SelectQueryWindowsFormsApplication
             report.Bands.Add(detailBand)
 
             Dim labelCategory As New XRLabel()
-            labelCategory.DataBindings.Add("Text", report.DataSource, "Products.CategoryID", "Category ID: {0}")
+            labelCategory.ExpressionBindings.Add(New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[CategoryID]"))
+            labelCategory.TextFormatString = "Category ID: {0}"
+
             labelCategory.TopF = 15
             detailBand.Controls.Add(labelCategory)
 
             Dim labelDeviation As New XRLabel()
-            labelDeviation.DataBindings.Add("Text", report.DataSource, "Products.PriceDeviation", "Price Deviation: {0}")
+            labelDeviation.ExpressionBindings.Add(New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[PriceDeviation]"))
             labelDeviation.TopF = 30
             labelDeviation.WidthF = 500
+            labelDeviation.TextFormatString = "Price Deviation: {0}"
             detailBand.Controls.Add(labelDeviation)
 
-            ' Publish the report.
-            Dim pt As New ReportPrintTool(report)
-            pt.ShowPreviewDialog()
+            ' Show the report.
+            report.ShowDesigner()
         End Sub
     End Class
 End Namespace

@@ -25,19 +25,19 @@
         Private Sub InitializeComponent()
             Me.button1 = New System.Windows.Forms.Button()
             Me.SuspendLayout()
-            ' 
-            ' button1
-            ' 
-            Me.button1.Location = New System.Drawing.Point(73, 93)
+            '
+            'button1
+            '
+            Me.button1.Location = New System.Drawing.Point(82, 93)
             Me.button1.Name = "button1"
             Me.button1.Size = New System.Drawing.Size(120, 47)
             Me.button1.TabIndex = 0
             Me.button1.Text = "Preview"
             Me.button1.UseVisualStyleBackColor = True
-            ' 
-            ' Form1
-            ' 
-            Me.AutoScaleDimensions = New System.Drawing.SizeF(6F, 13F)
+            '
+            'Form1
+            '
+            Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.ClientSize = New System.Drawing.Size(284, 261)
             Me.Controls.Add(Me.button1)
@@ -47,7 +47,7 @@
 
         End Sub
 
-        #End Region
+#End Region
 
         Private WithEvents button1 As System.Windows.Forms.Button
     End Class

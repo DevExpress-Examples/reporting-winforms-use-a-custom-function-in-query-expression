@@ -11,7 +11,7 @@ namespace SelectQueryWindowsFormsApplication {
             InitializeComponent();
 
             // Register the custom function.
-            StDevOperator.Register();
+            StDevFunction.Register();
         }
 
         private void button1_Click(object sender, EventArgs e) {
@@ -41,23 +41,26 @@ namespace SelectQueryWindowsFormsApplication {
 
             // Create a report layout.
             DetailBand detailBand = new DetailBand();
-            detailBand.Height = 50;
+            detailBand.Height = 100;
             report.Bands.Add(detailBand);
 
             XRLabel labelCategory = new XRLabel();
-            labelCategory.DataBindings.Add("Text", report.DataSource, "Products.CategoryID", "Category ID: {0}");
+            labelCategory.ExpressionBindings.Add(
+                new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[CategoryID]"));
+            labelCategory.TextFormatString = "Category ID: {0}";
             labelCategory.TopF = 15;
             detailBand.Controls.Add(labelCategory);
 
             XRLabel labelDeviation = new XRLabel();
-            labelDeviation.DataBindings.Add("Text", report.DataSource, "Products.PriceDeviation", "Price Deviation: {0}");
-            labelDeviation.TopF = 30;
+            labelDeviation.ExpressionBindings.Add(
+                new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[PriceDeviation]"));
+            labelDeviation.TopF = 50;
             labelDeviation.WidthF = 500;
+            labelDeviation.TextFormatString = "Price Deviation: {0}";
             detailBand.Controls.Add(labelDeviation);
 
-            // Publish the report.
-            ReportPrintTool pt = new ReportPrintTool(report);
-            pt.ShowPreviewDialog();
+            // Show the report.
+            report.ShowDesigner();
         }
     }
 }
