@@ -15,13 +15,13 @@ This example shows a custom function that evaluates the standard deviation (simi
 
 A custom function implements the following interfaces: 
 
-- [ICustomFunctionOperator](http://docs.devexpress.devx/CoreLibraries/DevExpress.Data.Filtering.ICustomFunctionOperator)
-- [ICustomFunctionOperatorBrowsable](http://docs.devexpress.devx/CoreLibraries/DevExpress.Data.Filtering.ICustomFunctionOperatorBrowsable)
-- [ICustomFunctionOperatorFormattable](http://docs.devexpress.devx/CoreLibraries/DevExpress.Data.Filtering.ICustomFunctionOperatorFormattable)
+- [ICustomFunctionOperator](https://docs.devexpress.com/CoreLibraries/DevExpress.Data.Filtering.ICustomFunctionOperator)
+- [ICustomFunctionOperatorBrowsable](https://docs.devexpress.com/CoreLibraries/DevExpress.Data.Filtering.ICustomFunctionOperatorBrowsable)
+- [ICustomFunctionOperatorFormattable](https://docs.devexpress.com/CoreLibraries/DevExpress.Data.Filtering.ICustomFunctionOperatorFormattable)
 
 ### Registration
 
-The static [CriteriaOperator.RegisterCustomFunction](http://docs.devexpress.devx/CoreLibraries/DevExpress.Data.Filtering.CriteriaOperator.RegisterCustomFunction(DevExpress.Data.Filtering.ICustomFunctionOperator)) method registers a custom function in this example.
+The static [CriteriaOperator.RegisterCustomFunction](https://docs.devexpress.com/CoreLibraries/DevExpress.Data.Filtering.CriteriaOperator.RegisterCustomFunction(DevExpress.Data.Filtering.ICustomFunctionOperator)) method registers a custom function in this example.
 
 For convenience, the custom function implements a static `Register` method that registers the function. Call this method  at application startup. 
 
